@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Texter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#AED581</item>
-        <item name="colorPrimaryVariant">#81C784</item>
+        <item name="colorPrimary">#1E70D3</item>
+        <item name="colorPrimaryVariant">#296DD1</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

