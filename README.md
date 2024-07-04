@@ -44,6 +44,16 @@ The remote app provides comprehensive control over the host device's texter appl
 - Reset Configuration: Restore default settings on the host application to ensure smooth operation.
 
 
+## Screenshots📲
+<div style="overflow-x: auto; white-space: nowrap;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/0a26acf5-76a3-4d99-8257-b045d9dddfe0" alt="Screenshot -1" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/1accff8b-9d63-447c-b468-7db28eaa30e6" alt="Screenshot 0" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/e93756fd-7460-43d5-8755-6e49a8bc2020" alt="Screenshot 0" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/6e0815de-378d-4779-9218-2b76eb777145" alt="Screenshot 0" style="width: 180px;">
+</div>
+
+
+
 ## Developers✨
 **Design and Developed by Yuvraj Singh Yadav**
 - Email: yyuvraj54@gmail.com
