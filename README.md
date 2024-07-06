@@ -2,6 +2,17 @@
 
 texter is a sophisticated spyware application designed to monitor the target device's surroundings and call activity while running in the background. This Android Studio project is compatible with devices running API levels 26 to 28 (Android 9 and 10). Upon installation, the app hides itself from the main menu (except on Android 10) and operates discreetly in the background using Android's Service framework.
 
+
+
+## 📸 Screenshots (Remorte App)
+<div style="overflow-x: auto; white-space: nowrap;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/0a26acf5-76a3-4d99-8257-b045d9dddfe0" alt="Screenshot -1" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/1accff8b-9d63-447c-b468-7db28eaa30e6" alt="Screenshot 0" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/e93756fd-7460-43d5-8755-6e49a8bc2020" alt="Screenshot 0" style="width: 180px;">
+    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/6e0815de-378d-4779-9218-2b76eb777145" alt="Screenshot 0" style="width: 180px;">
+</div>
+
+
 ## 🚀 Features
 - **Real-time Monitoring:** Tracks and records the surroundings and call activity of the host device.
 - **Stealth Operation:** Disappears from the main menu after the first launch, running covertly in the background.
@@ -37,14 +48,6 @@ The [remote app](https://github.com/yyuvraj54/Remort-App-spy) provides comprehen
 - **File Access:** View and access 3gp format files uploaded by the host device.
 - **Device Status:** Check the online status and current call activity of the host device.
 - **Reset Configuration:** Restore default settings on the host application to ensure smooth operation.
-
-## 📸 Screenshots (Remorte App)
-<div style="overflow-x: auto; white-space: nowrap;">
-    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/0a26acf5-76a3-4d99-8257-b045d9dddfe0" alt="Screenshot -1" style="width: 180px;">
-    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/1accff8b-9d63-447c-b468-7db28eaa30e6" alt="Screenshot 0" style="width: 180px;">
-    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/e93756fd-7460-43d5-8755-6e49a8bc2020" alt="Screenshot 0" style="width: 180px;">
-    <img src="https://github.com/yyuvraj54/texter-SPY/assets/30363687/6e0815de-378d-4779-9218-2b76eb777145" alt="Screenshot 0" style="width: 180px;">
-</div>
 
 ## ✨ Developers
 **Designed and Developed by Yuvraj Singh Yadav**
